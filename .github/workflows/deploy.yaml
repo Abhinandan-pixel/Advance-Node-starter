@@ -9,10 +9,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
- 
+    container: ubuntu
     strategy:
       matrix:
-        node-version: ["16.20.2"]
+        node-version: ["18.15.0"]
  
     services:
       mongodb:
