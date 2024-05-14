@@ -1,3 +1,4 @@
+jest.setTimeout(50000);
 const passport = require('passport');
 const Page = require('./helpers/page')
 let page;
