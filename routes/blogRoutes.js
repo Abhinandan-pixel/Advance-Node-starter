@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 const requireLogin = require('../middlewares/requireLogin');
-
+const keys = require('../config/keys');
 const Blog = mongoose.model('Blog');
 const redis = require('redis');
-const redisUrl = 'redis://127.0.0.1:6379';
-const client = redis.createClient(redisUrl);
+
+const client = redis.createClient(keys.redisUrl);
 const util = require('util');
 client.get = util.promisify(client.get);
 module.exports = app => {
