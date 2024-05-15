@@ -27,7 +27,7 @@ jobs:
           --health-timeout 5s
           --health-retries 5
         ports:
-          - 127.0.0.1:6379:6379
+          - 6379:6379
  
     env:
       NODE_ENV: ci
